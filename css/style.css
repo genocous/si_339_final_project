@@ -1,0 +1,8 @@
+.skip-link {
+    position: absolute;
+    left: -100000 px;
+}
+
+.skip-link:focus {
+    position: static;
+}
