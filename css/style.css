@@ -7,8 +7,51 @@
     position: static;
 }
 
+footer {
+    background-color: #15151e;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.socials {
+    list-style: none;
+}
+
+.socials li a {
+    color: #fff;
+    text-decoration: none;
+}
+
 /*Desktop view*/
 @media screen and (min-width: 992px) {
+    .video-container {
+        /*display: flex;
+        justify-content: center;
+        align-items: center;*/
+        text-align: right;
+        
+    }
+    
+    .video-container video {
+        width: 50%;
+        display: inline-block;
+        vertical-align: baseline;
+    }
+
     nav ul {
         margin: 0;
         list-style-type: none; 
