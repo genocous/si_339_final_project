@@ -36,14 +36,21 @@ footer {
     text-decoration: none;
 }
 
+h1{
+    font-size: 40px;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+div{
+    padding: 10px 15px;
+    margin: 0;
+}
 
 /* Videos page styling*/
-.h1_video {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 50px;
-    text-decoration: underline;
-}
+
 
 section {
     display: flex;
@@ -103,15 +110,6 @@ section ul li {
     /* active page link with bold and underline*/
     nav ul li a.current {
         font-weight: bold;
-        text-decoration: underline;
-    }
-
-    /* Videos page styling*/
-    .h1_video {
-        text-align: center;
-        margin-top: 20px;
-        padding-left: 20px;
-        font-size: 50px;
         text-decoration: underline;
     }
 
