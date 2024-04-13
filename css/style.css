@@ -3,6 +3,17 @@
     left: -100000px;
 }
 
+#main {
+    padding: 20px;
+}
+
+body{
+    font-size: 20px;
+    line-height: 1.15;
+    margin: 0;
+    padding: 0;
+  }
+  
 
 .skip-link:focus {
     position: static;
@@ -157,7 +168,7 @@ section ul li {
 
     section ul li {
         padding: 5px 20px;
-        font-size: 25px;
+        font-size: 20px;
         white-space: nowrap; 
     }
 
