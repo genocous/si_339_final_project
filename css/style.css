@@ -36,6 +36,7 @@ footer {
     text-decoration: none;
 }
 
+
 /* Videos page styling*/
 .h1_video {
     text-align: center;
@@ -44,11 +45,12 @@ footer {
     text-decoration: underline;
 }
 
-section h2 {
-    font-size: 30px;
-    text-decoration: underline;
-    margin-top: 20px;
-    text-align: center;
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 20px;
 }
 
 section p {
@@ -66,7 +68,7 @@ section ul {
 section ul li {
     padding: 5px 20px; /* Add padding to the top and bottom */
     font-size: 18px; /* Set font size */
-}
+} 
 
 /*Desktop view*/
 @media screen and (min-width: 992px) {
@@ -127,6 +129,11 @@ section ul li {
     }
 
     section h2 {
+        font-size: 30px;
+        text-decoration: underline;
+        margin-top: 20px;
+        text-align: left;
+        padding-bottom: 5px;
         padding-left: 20px;
     }
     
@@ -162,7 +169,7 @@ section ul li {
     }
         
     .video-container video {
-        width: 60%;
+        width: 40%;
     }
 
     
