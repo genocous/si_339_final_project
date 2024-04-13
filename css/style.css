@@ -7,7 +7,7 @@
 .skip-link:focus {
     position: static;
     left: 40px;
-    top: 40px; /* Adjust the top position as needed */
+    top: 40px; 
     background-color: #000;
     color: #fff;
     padding: 10px;
@@ -74,14 +74,14 @@ section p {
 }
 
 section ul {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
 }
 
 section ul li {
-    padding: 5px 20px; /* Add padding to the top and bottom */
-    font-size: 18px; /* Set font size */
+    padding: 5px 20px;
+    font-size: 18px;
 } 
 
 /*Desktop view*/
