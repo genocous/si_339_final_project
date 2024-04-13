@@ -3,8 +3,15 @@
     left: -100000px;
 }
 
+
 .skip-link:focus {
     position: static;
+    left: 40px;
+    top: 40px; /* Adjust the top position as needed */
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    z-index: 1;
 }
 
 footer {
@@ -63,7 +70,7 @@ section {
 section p {
     padding-left: 20px;
     margin-top: 20px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 section ul {
