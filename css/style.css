@@ -12,8 +12,8 @@
     background-position: center;  /* Parallax effect */
     background-repeat: no-repeat; /* Parallax effect */
     background-size: cover;       /* Parallax effect */
-    color: black;
-    height: 400px;                /* Parallax effect */
+    color: white;
+    height: 300px;                /* Parallax effect */
   }
 
 #main div:first-child{
