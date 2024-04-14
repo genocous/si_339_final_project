@@ -76,6 +76,12 @@ div{
     margin: 0;
 }
 
+.highlight {
+    font-weight: bold;
+    color: #007BFF; /* Choose a color that stands out */
+}
+
+
 /* Videos page styling*/
 
 
