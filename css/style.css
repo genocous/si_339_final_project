@@ -7,6 +7,22 @@
     padding: 20px;
 }
 
+.overview{
+    background-attachment: fixed; /* Parallax effect */     
+    background-position: center;  /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover;       /* Parallax effect */
+    color: black;
+    height: 400px;                /* Parallax effect */
+  }
+
+#main div:first-child{
+    display: grid;
+    grid-column: 1 / -1;
+    background-image: url('../images/header.png');
+  
+  }
+  
 body{
     font-size: 20px;
     line-height: 1.15;
@@ -78,7 +94,7 @@ div{
 
 .highlight {
     font-weight: bold;
-    color: #007BFF; /* Choose a color that stands out */
+    color: #007BFF; 
 }
 
 
