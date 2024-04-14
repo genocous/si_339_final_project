@@ -3,6 +3,17 @@
     left: -100000px;
 }
 
+#main {
+    padding: 20px;
+}
+
+body{
+    font-size: 20px;
+    line-height: 1.15;
+    margin: 0;
+    padding: 0;
+  }
+  
 
 .skip-link:focus {
     position: static;
@@ -49,6 +60,15 @@ h1{
     padding: 15px;
     margin-top: 20px;
     font-weight: bold;
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #444; 
+    border-bottom: 2px solid #ddd; 
+    padding-bottom: 5px;
 }
 
 div{
@@ -157,7 +177,7 @@ section ul li {
 
     section ul li {
         padding: 5px 20px;
-        font-size: 25px;
+        font-size: 20px;
         white-space: nowrap; 
     }
 
