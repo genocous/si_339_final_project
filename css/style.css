@@ -126,6 +126,46 @@ section ul li {
     font-size: 18px;
 } 
 
+/*mobile hamburger view*/
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+/*Hamburger button lines styling*/
+.line {
+    width: 30px;
+    height: 3px;
+    background: black;
+    margin: 5px 0;
+}
+
+#navMenu {
+    display: none;
+}
+
+
+/* Show hamburger button on mobile screens */
+@media screen and (max-width: 991px) {
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hide the desktop navigation */
+    .navigation ul {
+        display: none;
+    }
+
+    /* Show the mobile navigation when the menu is toggled */
+    .navigation ul.show {
+        display: block;
+    }
+}
+
 /*Desktop view*/
 @media screen and (min-width: 992px) {
     /* Navigation bar styling */
