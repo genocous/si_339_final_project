@@ -3,7 +3,7 @@
     left: -100000px;
 }
 
-.intro_main {
+.intro-main {
     padding: 20px;
 }
 
@@ -21,10 +21,22 @@
 .intro-main div:first-child{
     display: grid;
     grid-column: 1 / -1;
-    background-image: url('../images/ballpark_sunset.jpg')
+    background-image: url('../images/ballpark_sunset.jpg');
   
 }
   
+.intro-video .overview {
+    display: grid;
+    grid-column: 1 / -1;
+    background-image: url('../images/orioles.jpg');
+}
+
+.intro_ml_explanation .overview {
+    display: grid;
+    grid-column: 1 / -1;
+    background-image: url('../images/header.png');
+}
+
 body{
     font-size: 20px;
     line-height: 1.15;
@@ -76,6 +88,7 @@ footer {
 .footer-bottom {
     text-align: center;
     padding-top: 10px;
+    font-size: 15px;
 }
 
 .socials {
@@ -273,7 +286,6 @@ section ul li {
 
     section .top-row {
         display: flex;
-        align-items: flex-end;
     }
 
     section h2 {
