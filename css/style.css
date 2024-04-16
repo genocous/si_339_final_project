@@ -180,7 +180,12 @@ details {
     border: 1px solid #ccc;
     border-radius: 5px;
     overflow: hidden;
-    transition: all 1s ease-out;
+    transition: max-height 4s ease-out;
+    max-height: 40px; 
+}
+
+details[open] {
+    max-height: 500px; 
 }
 
 summary {
@@ -190,9 +195,7 @@ summary {
     cursor: pointer;
 }
 
-details[open] summary {
-    background-color: #e0e0e0;
-}
+
 
 details p {
     padding: 10px;
