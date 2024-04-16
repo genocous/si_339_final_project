@@ -22,6 +22,8 @@
     display: grid;
     grid-column: 1 / -1;
     background-image: url('../images/ballpark_sunset.jpg');
+    background-size: 100% auto;
+    padding-top: 20%;
   
 }
   
@@ -31,10 +33,28 @@
     background-image: url('../images/orioles.jpg');
 }
 
+.intro-video .overview {
+    display: grid;
+    grid-column: 1 / -1;
+    background-image: url('../images/orioles.jpg');
+    background-size: 100% auto;
+    padding-top: 20%;
+}
+
 .intro_ml_explanation .overview {
     display: grid;
     grid-column: 1 / -1;
     background-image: url('../images/header.png');
+    background-size: 100% auto;
+    padding-top: 20%;
+}
+
+.intro-methodology .overview {
+    display: grid;
+    grid-column: 1 / -1;
+    background-image: url('../images/field_of_dreams.jpg');
+    background-size: 100% auto;
+    padding-top: 20%;
 }
 
 body{
