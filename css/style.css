@@ -39,7 +39,7 @@
 .intro_ml_explanation .overview {
     display: grid;
     grid-column: 1 / -1;
-    background-image: url('../images/header.png');
+    background-image: url('../images/dbacks.jpg');
     background-size: 100% auto;
     padding-top: 20%;
 }
@@ -47,7 +47,7 @@
 .intro-methodology .overview {
     display: grid;
     grid-column: 1 / -1;
-    background-image: url('../images/field_of_dreams.jpg');
+    background-image: url('../images/cubs.jpg');
     background-size: 100% auto;
     padding-top: 20%;
 }
