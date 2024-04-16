@@ -135,6 +135,32 @@ div{
     color: #007BFF; 
 }
 
+/* methodology styling */
+details {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 1s ease-out;
+}
+
+summary {
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+details[open] summary {
+    background-color: #e0e0e0;
+}
+
+details p {
+    padding: 10px;
+    margin: 0;
+    color: #333;
+}
+
 
 /* Videos page styling*/
 

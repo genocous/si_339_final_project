@@ -32,10 +32,29 @@
         <h1>Methodology</h1>
     </header>
 
-    <main id = "main">
+    <main id="main">
+        <section>
+            <details>
+                <summary>Data Extraction and Cleaning</summary>
+                <p>This data was gathered from Statcast using the Pybaseball library in Python. I selected specific columns of interest and cleaned the data by renaming the columns to make them more descriptive. I adjusted player names from "Last_Name, First_Name" to "First_Name, Last_Name" for both hitters and pitchers in the dataset.</p>
+            </details>
+            <details>
+                <summary>Data Standardization</summary>
+                <p>Next, I standardized the pitch type column by mapping various pitch types to four categories: Fastball, Changeup, Curveball, and Slider. Some pitches were grouped with others that did not perfectly align, but for modeling purposes, these groupings were acceptable.
 
+                I also cleaned the metrics by transforming horizontal break into absolute values, creating a new column for differential break (vertical break minus horizontal break), and establishing new columns for differences in velocity, horizontal break, and induced vertical break. These columns were tested in the model later to assess their utility.</p>
+            </details>
+            <details>
+                <summary>Feature Selection and Engineering</summary>
+                <p>Following that, I created two columns in the dataframe: 'whiff' and 'swing'. The 'whiff' column increments by 1 when the batter swings and misses or foul tips a pitch into the catcher's glove. The 'swing' column increments by 1 whenever there is a swing. I filtered the data into a new dataframe (df_swing) based on whether the hitter swung. Additionally, I created a new dataframe (df_rhp_fb) containing only right-handed pitchers and fastballs. I removed all NaN values from both dataframes to ensure the model could run without missing values.
 
-
+                Subsequently, I began the process of feature selection. I took a random sample of 10% of the fastballs thrown by right-handed pitchers to right-handed hitters and ran a Random Forest model. Analyzing the model's feature importances guided my feature engineering efforts, which included squaring velocity, multiplying extension and induced vertical break, and cubing spin rate. Running the Random Forest model on the larger RHP dataframe yielded a mean squared error (MSE) of 0.09 and an R-squared score of -0.03, indicating the model was not a good fit for the data. I continue to work on feature engineering and hyperparameter tuning to improve model performance.</p>
+            </details>
+            <details>
+                <summary>Modeling</summary>
+                <p>I explored another machine learning model: the XGBoost model. I adjusted the features further for this model and obtained initial results. The model produced an MSE of 0.086 and an R-squared score of 0.013, showing improvement over the Random Forest model but still needing refinement. I applied the model to the dataframe to generate results for right-handed pitchers, even though the dataframe included both left-handed and right-handed hitters.</p>
+            </details>
+        </section>
     </main>
 
     <footer>
