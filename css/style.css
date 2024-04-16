@@ -18,7 +18,7 @@
 }
   
 
-.intro-main div:first-child{
+.intro-main .overview{
     display: grid;
     grid-column: 1 / -1;
     background-image: url('../images/ballpark_sunset.jpg');
@@ -27,11 +27,6 @@
   
 }
   
-.intro-video .overview {
-    display: grid;
-    grid-column: 1 / -1;
-    background-image: url('../images/orioles.jpg');
-}
 
 .intro-video .overview {
     display: grid;
