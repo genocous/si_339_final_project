@@ -181,7 +181,7 @@ details {
     border: 1px solid #ccc;
     border-radius: 5px;
     overflow: hidden;
-    transition: max-height 4s ease-out;
+    transition: max-height 3s ease-in-out;
     max-height: 40px; 
 }
 
@@ -273,24 +273,25 @@ section ul li {
 
     /* Hide the desktop navigation */
     .navigation ul {
-        display: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out; 
     }
-
+    
     /* Show the mobile navigation when the menu is toggled */
     .navigation ul.show {
-        display: block;
-        background-color: #f8f8f8; 
-        padding: 10px; 
-        border: 1px solid #ccc; 
+        max-height: 500px; 
+        background-color: #f8f8f8;
+        padding: 10px;
+        border: 1px solid #ccc;
         box-shadow: 0 2px 5px #ccc;
-        transition: all 0.3s ease-in-out; /* Smooth transition */
     }
     
     /* Style each list item */
     .navigation ul.show li {
         margin: 5px 0;
-        padding: 5px; 
-        list-style-type: none; 
+        padding: 5px;
+        list-style-type: none;
     }
     
     /* Style links inside the dropdown menu */
