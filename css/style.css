@@ -3,8 +3,8 @@
     left: -100000px;
 }
 
-.intro-main {
-    padding: 20px;
+.text {
+    padding: 50px;
 }
 
 .overview{
@@ -18,7 +18,7 @@
 }
   
 
-.intro-main div:first-child{
+.intro-main .overview{
     display: grid;
     grid-column: 1 / -1;
     background-image: url('../images/ballpark_sunset.jpg');
@@ -27,11 +27,6 @@
   
 }
   
-.intro-video .overview {
-    display: grid;
-    grid-column: 1 / -1;
-    background-image: url('../images/orioles.jpg');
-}
 
 .intro-video .overview {
     display: grid;
@@ -153,6 +148,32 @@ div{
 .highlight {
     font-weight: bold;
     color: #007BFF; 
+}
+
+/* methodology styling */
+details {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 1s ease-out;
+}
+
+summary {
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+details[open] summary {
+    background-color: #e0e0e0;
+}
+
+details p {
+    padding: 10px;
+    margin: 0;
+    color: #333;
 }
 
 

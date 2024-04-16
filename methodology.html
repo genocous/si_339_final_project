@@ -32,35 +32,32 @@
         
     </header>
 
-    <main id = "main" class = "intro-methodology">
+    <main id="main" class = 'intro-methodology'>
         <div class = "overview">
             <h1 class = "intro-h1">Methodology</h1>
         </div>
-        <div>
-            <h2>Data Extraction and Initial Cleaning</h2>
-            <p>This data was extracted from Statcast, using the Pybaseball library that works very well in Python. I extracted the specific columns that I was interested in collecting, and then began to clean the data by first changing the column names to be more descriptive. Then, I cleaned the names, moving them from the format "Last_Name, First_Name" to "First_Name, Last_Name". I did that for both hitters and pitchers in the dataset.</p>
-            <br>
-    
-            <h2>Standardizing Pitch Types</h2>
-            <p>Next, I had to standardize the pitch type column, and I mapped all the different pitch types to four pitches: Fastball, Changeup, Curveball, Slider. There were some pitches that I had to group with pitches that did not necessarily fit, but for the sake of the model, they should be fine.</p>
-            <br>
-    
-            <h2>Creating New Columns for Handedness and Height Differences</h2>
-            <p>After that, I created a new column for the handedness of the pitcher, and then created a new column for the handedness of the hitter. I then created a new column for the difference in handedness between the pitcher and the hitter, which I could use to filter the data later on. I also created a new column for the difference in height between the pitcher and the hitter, which I could also use to filter the data later on.</p>
-            <br>
-    
-            <h2>Creating New Columns for Release Point, Extension, and Spin Rate Differences</h2>
-            <p>Next, I created a new column for the difference in release point between the pitcher and the hitter, which I could use to filter the data later on. I also created a new column for the difference in extension between the pitcher and the hitter, which I could also use to filter the data later on. I then created a new column for the difference in spin rate between the pitcher and the hitter, which I could also use to filter the data later on.</p>
-            <br>
-    
-            <h2>Cleaning Metrics and Creating New Columns for Break and Velocity Differences</h2>
-            <p>After that, I began to clean the metrics, making the horizontal break the absolute value, creating a differential break column (vertical break - horizontal break), and creating new columns for the differences in velocity, horizontal break, and induced vertical break, so that I could test these columns in the model later and see if they were useful.</p>
-            <br>
-    
-            <h2>Creating 'Whiff' and 'Swing' Columns and Filtering Data</h2>
-            <p>Next, I created two columns in the dataframe for 'whiff', and 'swing'. The whiff column increments to 1 if the batter swung and missed at a pitch, or foul tipped the pitch into the catchers glove, and the swing column increments to 1 for any result where there is a swing involved. I then filtered df into a new dataframe (df_swing), based on whether the hitter swung or not. I also created a new dataframe df_rhp_fb, and applied a mask so the dataframe only contained right-handed pitchers and fastballs. I then dropped all the NaN values from both of those dataframes, ensuring that the model could run without worrying about missing values.</p>
-            <br>
-        </div>
+        <section class = 'text'>
+            <details>
+                <summary>Data Extraction and Cleaning</summary>
+                <p>This data was gathered from Statcast using the Pybaseball library in Python. I selected specific columns of interest and cleaned the data by renaming the columns to make them more descriptive. I adjusted player names from "Last_Name, First_Name" to "First_Name, Last_Name" for both hitters and pitchers in the dataset.</p>
+            </details>
+            <details>
+                <summary>Data Standardization</summary>
+                <p>Next, I standardized the pitch type column by mapping various pitch types to four categories: Fastball, Changeup, Curveball, and Slider. Some pitches were grouped with others that did not perfectly align, but for modeling purposes, these groupings were acceptable.
+
+                I also cleaned the metrics by transforming horizontal break into absolute values, creating a new column for differential break (vertical break minus horizontal break), and establishing new columns for differences in velocity, horizontal break, and induced vertical break. These columns were tested in the model later to assess their utility.</p>
+            </details>
+            <details>
+                <summary>Feature Selection and Engineering</summary>
+                <p>Following that, I created two columns in the dataframe: 'whiff' and 'swing'. The 'whiff' column increments by 1 when the batter swings and misses or foul tips a pitch into the catcher's glove. The 'swing' column increments by 1 whenever there is a swing. I filtered the data into a new dataframe (df_swing) based on whether the hitter swung. Additionally, I created a new dataframe (df_rhp_fb) containing only right-handed pitchers and fastballs. I removed all NaN values from both dataframes to ensure the model could run without missing values.
+
+                Subsequently, I began the process of feature selection. I took a random sample of 10% of the fastballs thrown by right-handed pitchers to right-handed hitters and ran a Random Forest model. Analyzing the model's feature importances guided my feature engineering efforts, which included squaring velocity, multiplying extension and induced vertical break, and cubing spin rate. Running the Random Forest model on the larger RHP dataframe yielded a mean squared error (MSE) of 0.09 and an R-squared score of -0.03, indicating the model was not a good fit for the data. I continue to work on feature engineering and hyperparameter tuning to improve model performance.</p>
+            </details>
+            <details>
+                <summary>Modeling</summary>
+                <p>I explored another machine learning model: the XGBoost model. I adjusted the features further for this model and obtained initial results. The model produced an MSE of 0.086 and an R-squared score of 0.013, showing improvement over the Random Forest model but still needing refinement. I applied the model to the dataframe to generate results for right-handed pitchers, even though the dataframe included both left-handed and right-handed hitters.</p>
+            </details>
+        </section>
     </main>
     <footer>
         <ul class="socials">
