@@ -18,7 +18,7 @@
 }
   
 
-.intro-main .overview{
+.intro-main .overview {
     display: grid;
     grid-column: 1 / -1;
     background-image: url('../images/ballpark_sunset.jpg');
@@ -60,15 +60,15 @@
     padding-top: 20%;
 }
 
-.intro-results {
+.intro-results .overview {
     display: grid;
     grid-column: 1 / -1;
-    background-image: url('../images/tigers.jpg');
+    background-image: url('../images/methodology.jpg');
     background-size: 100% auto;
     padding-top: 20%;
 }
 
-.intro-visuals {
+.intro-visuals .overview {
     display: grid;
     grid-column: 1 / -1;
     background-image: url('../images/royals.jpg');
@@ -148,11 +148,12 @@ h1{
 }
 
 .intro-h1 {
-    margin-top: 40px;
+    margin-top: 150px;
     margin-bottom: 15px;
     font-size: 60px;
     border-bottom: 2px solid #ddd; 
     padding-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 h2 {
