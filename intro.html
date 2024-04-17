@@ -37,20 +37,22 @@
         <div class = "overview">
             <h1 class = "intro-h1">A Journey into Baseball Analytics: Stuff+</h1>
         </div>
-        <div class = 'text'>
-            <h2>Introduction to FanGraphs</h2>
-            <p> FanGraphs is one of the premier sources for baseball statistics and analytics, providing in-depth data and insights for players, teams, and fans. The platform offers a plethora of traditional and advanced metrics to help evaluate player performance and team strategies, including offensive and defensive statistics, projections, and analysis from top experts in the field.</p>
-            <br>
-            <h2>Understanding Stuff+</h2>
-            <p>FanGraphs is known for its commitment to innovation in baseball analytics. The platform often introduces and highlights new metrics that offer fresh perspectives on player and team performance. The metric we are analyzing is called <span class="highlight">Stuff+</span>, a measure of the quality and effectiveness of a pitcher's pitch. Stuff+ was developed by Driveline Baseball, a leading player development organization known for its data-driven training methods. Stuff+ looks only at the physical characteristics of a pitch, providing a comprehensive score based on various factors such as pitch velocity, spin rate, movement profile, release point, and extension.</p>
-            <br>
-            <h2>Evaluating Pitches with Stuff+</h2>
-            <p>A pitcher’s secondary pitches are defined based on their primary fastball — with “primary” defined by usage in an outing — and so are judged by velocity and movement differentials along with raw velocity and movement numbers. The model also includes “axis differential,” a statistic that attempts to describe the difference between the movement expected by spin alone and the observed movement affected by the phenomenon described as seam-shifted wake.</p>
-            <br>
-            <p>Stuff+ was trained against run values, so even if the research community is divided about how much a pitcher can control weak contact, the model includes an inherent nod to the possibility that they do possess some of that ability. The importance of release point in the model also suggests that Stuff+ includes some deception — you’ll find some pitchers with unique release point and movement combinations score very well despite lower velocities, at least. Vertical attack angle is not explicitly in the model, but it is captured by the interaction between release points and movement.</p>
-            <br>
-            <p>Generally, the model aims to capture the “nastiest” pitches in baseball, using a decision tree-based model to capture the nonlinear relationships that exist across release points, velocities, pitch movement, and more.</p>
-        
+        <section class = 'text'>
+            <details>
+                <summary>Introduction to FanGraphs</summary>
+                <p> FanGraphs is one of the premier sources for baseball statistics and analytics, providing in-depth data and insights for players, teams, and fans. The platform offers a plethora of traditional and advanced metrics to help evaluate player performance and team strategies, including offensive and defensive statistics, projections, and analysis from top experts in the field.</p>
+            </details>
+            <details>
+                <summary>Understanding Stuff+</summary>
+                <p>FanGraphs is known for its commitment to innovation in baseball analytics. The platform often introduces and highlights new metrics that offer fresh perspectives on player and team performance. The metric we are analyzing is called <span class="highlight">Stuff+</span>, a measure of the quality and effectiveness of a pitcher's pitch. Stuff+ was developed by Driveline Baseball, a leading player development organization known for its data-driven training methods. Stuff+ looks only at the physical characteristics of a pitch, providing a comprehensive score based on various factors such as pitch velocity, spin rate, movement profile, release point, and extension.</p>
+            </details>
+            <details>
+                <summary>Evaluating Pitches with Stuff+</summary>
+                <p>A pitcher’s secondary pitches are defined based on their primary fastball — with “primary” defined by usage in an outing — and so are judged by velocity and movement differentials along with raw velocity and movement numbers. The model also includes “axis differential,” a statistic that attempts to describe the difference between the movement expected by spin alone and the observed movement affected by the phenomenon described as seam-shifted wake.</p>
+                <p>Stuff+ was trained against run values, so even if the research community is divided about how much a pitcher can control weak contact, the model includes an inherent nod to the possibility that they do possess some of that ability. The importance of release point in the model also suggests that Stuff+ includes some deception — you’ll find some pitchers with unique release point and movement combinations score very well despite lower velocities, at least. Vertical attack angle is not explicitly in the model, but it is captured by the interaction between release points and movement.</p>
+                <p>Generally, the model aims to capture the “nastiest” pitches in baseball, using a decision tree-based model to capture the nonlinear relationships that exist across release points, velocities, pitch movement, and more.</p>
+            </details>
+            
         </div>
 
     </main>
