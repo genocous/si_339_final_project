@@ -239,6 +239,22 @@ section ul li {
     padding-left: 20px;
 }
 
+.video-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+    
+.video-container {
+    flex: 1;
+    text-align: center;
+}
+    
+.video-container video {
+    width: 90%;
+}
+
 /*mobile hamburger view*/
 .hamburger {
     display: none;
