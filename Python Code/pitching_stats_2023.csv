@@ -1,4 +1,4 @@
-﻿"last_name, first_name",player_id,year,pa,bip,ba,est_ba,est_ba_minus_ba_diff,slg,est_slg,est_slg_minus_slg_diff,woba,est_woba,est_woba_minus_woba_diff,era,xera,era_minus_xera_diff
+﻿name,player_id,year,pa,bip,ba,est_ba,est_ba_minus_ba_diff,slg,est_slg,est_slg_minus_slg_diff,woba,est_woba,est_woba_minus_woba_diff,era,xera,era_minus_xera_diff
 "Mikolas, Miles",571945,2023,860,674,0.282,0.291,-0.009,0.454,0.498,-0.044,0.33,0.354,-0.024,4.78,5.44,-0.657
 "Webb, Logan",657277,2023,850,619,0.248,0.255,-0.007,0.374,0.395,-0.021,0.283,0.295,-0.012,3.25,3.63,-0.38
 "Gallen, Zac",668678,2023,846,574,0.238,0.254,-0.016,0.382,0.427,-0.045,0.289,0.314,-0.025,3.47,4.16,-0.689
