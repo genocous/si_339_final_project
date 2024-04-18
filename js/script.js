@@ -30,7 +30,6 @@ function toggleDetailsBasedOnScreenWidth() {
 // Event listener function for handling toggle behavior
 function handleDetailsToggle(event) {
     const details = event.target;
-    // Optional: additional behavior when toggling details
 }
 
 // Call the function on page load and window resize
