@@ -6,39 +6,32 @@ document.getElementById('menuToggle').addEventListener('click', function() {
 // Horizontal nav bar for desktop
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Function to adjust the behavior of details elements based on screen width
-    function adjustDetails() {
-        const detailsElements = document.querySelectorAll('details');
-        const isDesktop = window.innerWidth >= 992; // Define the breakpoint for desktop view
+function toggleDetailsBasedOnScreenWidth() {
+    const detailsElements = document.querySelectorAll('details');
+    const desktopBreakpoint = 992; // Define your breakpoint for desktop view
 
+    if (window.innerWidth >= desktopBreakpoint) {
+        // For desktop view, keep all details elements open and disable interaction
         detailsElements.forEach(details => {
-            if (isDesktop) {
-                // Set the open attribute to keep the details open
-                details.setAttribute('open', true);
-                
-                // Disable the ability to toggle the open state in desktop view
-                details.querySelector('summary').addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevent the toggle behavior
-                });
-            } else {
-                // Enable the default toggle behavior in mobile view
-                details.removeAttribute('open');
-                
-                // Remove the event listener in mobile view
-                details.querySelector('summary').removeEventListener('click', preventToggle);
-            }
+            details.setAttribute('open', 'open');
+            details.removeEventListener('click', handleDetailsToggle);
+            details.style.pointerEvents = 'none';
+        });
+    } else {
+        // For mobile and tablet view, allow collapsible functionality
+        detailsElements.forEach(details => {
+            details.removeAttribute('open');
+            details.addEventListener('click', handleDetailsToggle);
+            details.style.pointerEvents = 'auto';
         });
     }
+}
 
-    // Function to prevent toggling of details elements
-    function preventToggle(event) {
-        event.preventDefault();
-    }
+// Event listener function for handling toggle behavior
+function handleDetailsToggle(event) {
+    const details = event.target;
+}
 
-    // Initial adjustment when the page loads
-    adjustDetails();
-
-    // Adjust when the window is resized
-    window.addEventListener('resize', adjustDetails);
-});
+// Call the function on page load and window resize
+window.addEventListener('load', toggleDetailsBasedOnScreenWidth);
+window.addEventListener('resize', toggleDetailsBasedOnScreenWidth);
