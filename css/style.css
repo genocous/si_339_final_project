@@ -250,26 +250,17 @@ section ul li {
     width: 90%;
 }
 
-/*mobile hamburger view*/
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 10px;
+
+
+/* In Text Link Stying */
+details a {
+    color: inherit; 
 }
 
-/*Hamburger button lines styling*/
-.line {
-    width: 30px;
-    height: 3px;
-    background: black;
-    margin: 5px 0;
-}
-
-#navMenu {
-    display: none;
+/* Change link color and font weight on hover */
+details a:hover {
+    color: blue; 
+    font-weight: bold; 
 }
 
 @media screen and (prefers-reduced-motion: reduce){
@@ -290,96 +281,97 @@ section ul li {
 
 
 
-/* Show hamburger button on mobile screens */
-@media screen and (max-width: 991px) {
-    .hamburger {
-        display: flex;
-    }
-
-    /* Hide the desktop navigation */
-    .navigation ul {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out; 
-    }
-    
-    /* Show the mobile navigation when the menu is toggled */
-    .navigation ul.show {
-        max-height: 500px; 
-        background-color: #f8f8f8;
-        padding: 10px;
-        border: 1px solid #ccc;
-        box-shadow: 0 2px 5px #ccc;
-    }
-    
-    /* Style each list item */
-    .navigation ul.show li {
-        margin: 5px 0;
-        padding: 5px;
-        list-style-type: none;
-    }
-    
-    /* Style links inside the dropdown menu */
-    .navigation ul.show li a {
-        color: #333; 
-        text-decoration: none; 
-        font-size: 16px; 
-        display: block; 
-        padding: 8px; 
-        border-radius: 3px; 
-    }
-    
-    .navigation ul.show li a:hover {
-        background-color: #e0e0e0; 
-        color: #000; 
-    }
+/* Default styles for hamburger menu (mobile view) */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
 }
 
+.line {
+    width: 30px;
+    height: 3px;
+    background: black;
+    margin: 5px 0;
+}
 
+/* Hide the desktop navigation */
+.navigation ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out; 
+}
 
+/* Show the mobile navigation when the menu is toggled */
+.navigation ul.show {
+    max-height: 500px; 
+    background-color: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px #ccc;
+}
 
+/* Style each list item */
+.navigation ul.show li {
+    margin: 5px 0;
+    padding: 5px;
+    list-style-type: none;
+}
 
+/* Style links inside the dropdown menu */
+.navigation ul.show li a {
+    color: #333; 
+    text-decoration: none; 
+    font-size: 16px; 
+    display: block; 
+    padding: 8px; 
+    border-radius: 3px; 
+}
 
-
-
-
-
+.navigation ul.show li a:hover {
+    background-color: #e0e0e0; 
+    color: #000; 
+}
 
 /*Desktop view*/
 @media screen and (min-width: 992px) {
-    /* Navigation bar styling */
-    nav ul {
+    .hamburger {
+        display: none; /* Hide hamburger icon in desktop view */
+    }
+
+    .navigation ul {
         margin: 0;
         list-style-type: none; 
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
         justify-items: center;
+        background-color: lightgray; 
+        padding: 10px;
+        max-height: initial; 
     }
-    
+
     /*remove underline and change color for link*/    
-    nav ul li a {
+    .navigation ul li a {
         text-decoration: none; 
         color: black; 
         font-size: large;
     }
-    
+
     /*make links blue and bold on hover*/
-    nav ul li a:hover {
+    .navigation ul li a:hover {
         color: blue;
         font-weight: bold; 
     }
-    
-    /*color for navigation bar*/
-    nav {
-        background-color: lightgray; 
-        padding: 10px; 
-    }
-    
+
     /* active page link with bold and underline*/
-    nav ul li a.current {
+    .navigation ul li a.current {
         font-weight: bold;
         text-decoration: underline;
     }
+
 
     section {
         display: flex;
