@@ -400,6 +400,12 @@ details a:hover {
     color: #000; 
 }
 
+/* Apply grayscale filter to images */
+.grayscale {
+    filter: grayscale(100%);
+}
+
+
 /*Desktop view*/
 @media screen and (min-width: 992px) {
     .hamburger {
