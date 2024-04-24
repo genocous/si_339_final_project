@@ -43,7 +43,7 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+button.submit-button:hover {
     background-color: #003d80; /* Darker shade of blue on hover */
 }
 
