@@ -50,6 +50,22 @@ document.addEventListener('DOMContentLoaded', function () {
         // Shows success message
         successMessage.classList.remove('hidden');
         form.reset();
+
+// Get the button element
+const grayscaleBtn = document.getElementById('grayscaleBtn');
+
+// Add click event listener to the button
+grayscaleBtn.addEventListener('click', function() {
+    // Toggle the grayscale class on the body
+    document.body.classList.toggle('grayscale');
+
+    // Toggle grayscale for images
+    const images = document.querySelectorAll('img');
+    images.forEach(image => {
+        image.classList.toggle('grayscale');
+    });
+});
+
         
         // Hide success message after 3 seconds
         setTimeout(function() {
