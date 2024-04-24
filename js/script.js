@@ -50,6 +50,13 @@ document.addEventListener('DOMContentLoaded', function () {
         // Shows success message
         successMessage.classList.remove('hidden');
         form.reset();
+        
+        // Hide success message after 3 seconds
+        setTimeout(function() {
+            successMessage.classList.add('hidden');
+        }, 3000);
+    });
+});
 
 // Get the button element
 const grayscaleBtn = document.getElementById('grayscaleBtn');
@@ -63,13 +70,5 @@ grayscaleBtn.addEventListener('click', function() {
     const images = document.querySelectorAll('img');
     images.forEach(image => {
         image.classList.toggle('grayscale');
-    });
-});
-
-        
-        // Hide success message after 3 seconds
-        setTimeout(function() {
-            successMessage.classList.add('hidden');
-        }, 3000);
     });
 });
