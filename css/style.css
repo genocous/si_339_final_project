@@ -35,12 +35,16 @@ textarea {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #0056b3; /* Darker shade of blue */
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #003d80; /* Darker shade of blue on hover */
 }
 
 
