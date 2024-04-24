@@ -3,9 +3,7 @@ document.getElementById('menuToggle').addEventListener('click', function() {
     document.querySelector('.navigation ul').classList.toggle('show');
 });
 
-// Horizontal nav bar for desktop
-
-
+// Getting rid of toggle and click features when in desktop view
 function toggleDetailsBasedOnScreenWidth() {
     const detailsElements = document.querySelectorAll('details');
     const desktopBreakpoint = 992; // Breakpoint for desktop view
@@ -39,3 +37,23 @@ function handleDetailsToggle(event) {
 // Call the function on page load and window resize
 window.addEventListener('load', toggleDetailsBasedOnScreenWidth);
 window.addEventListener('resize', toggleDetailsBasedOnScreenWidth);
+
+
+// Form 
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Shows success message
+        successMessage.classList.remove('hidden');
+        form.reset();
+        
+        // Hide success message after 3 seconds
+        setTimeout(function() {
+            successMessage.classList.add('hidden');
+        }, 3000);
+    });
+});
